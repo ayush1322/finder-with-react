@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+body {
+  background-color: rgba(74, 44, 125, 0.879);
+
+  color: white;
+  font-family: "poppins", sans-serif;
+  margin: 0;
+}
+header {
+  width: 100%;
+  background-color: rgb(16, 85, 131);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  border: 2px solid rgb(44, 33, 33);
+  background-color: transparent;
+  border-radius: 40px;
+  color: white;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 6px 8px;
+  font-style: italic;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.search:focus {
+  outline: none;
+}
+.movie-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.movie {
+  width: 300px;
+  margin: 1rem;
+  background-color: teal;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 3px 3px 3px rgba(246, 5, 5, 0.421);
+  overflow: hidden;
+}
+.movie img {
+  object-fit: cover;
+  height: 450px;
+  width: 100%;
+}
+.movie-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-info h3 {
+  margin: 0;
+}
+.movie-over {
+  background-color: white;
+  color: rgba(24, 7, 7, 0.756);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  overflow: auto;
+  max-height: 100%;
+  transition: transform 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.421);
+}
+.movie:hover .movie-over {
+  transform: translateY(0);
+}
+.logo {
+  font-size: 3rem;
+  padding-left: 20px;
+  cursor: pointer;
+  color: rgb(217, 205, 236);
+  font-family: cursive;
+}
